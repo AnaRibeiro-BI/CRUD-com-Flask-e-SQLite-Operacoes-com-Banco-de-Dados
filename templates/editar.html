@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cliente</title>
+</head>
+<body>
+    <h1>Editar Cliente</h1>
+    <form action="/atualizar/{{ cliente[0] }}" method="POST">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" value="{{ cliente[1] }}" required>
+        </div>
+        <div>
+            <label for="idade">Idade:</label>
+            <input type="number" name="idade" id="idade" value="{{ cliente[2] }}" required>
+        </div>
+        <button type="submit">Atualizar</button>
+    </form>
+    <a href="/clientes">Cancelar</a>
+</body>
+</html>

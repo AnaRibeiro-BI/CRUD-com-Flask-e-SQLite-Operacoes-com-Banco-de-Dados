@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <ul>
+        {% for cliente in clientes %}
+        <li>
+            {{ cliente[1] }} - {{ cliente[2] }} anos
+            <a href="/editar/{{ cliente[0] }}">Editar</a>
+            <a href="/deletar/{{ cliente[0] }}">Deletar</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Voltar ao Cadastro</a>
+</body>
+</html>
